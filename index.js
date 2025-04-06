@@ -32,6 +32,9 @@ io.on('connection', (socket) => {
 app.get('/messages', (req, res) => {
     res.send(messages);
 });
+app.get('/ping', (req, res) => {
+    res.send('pong');
+});
 
 server.listen(3000, () => {
     console.log('Server listening on http://localhost:3000');
